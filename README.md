@@ -11,7 +11,10 @@ effect tracks the physical motion of your hand.
 The optics are a port of [FrostFold](https://github.com/askmaddyy/FrostFold),
 which does the same thing on iPhone using device tilt.
 
-> Demo video goes here.
+<video src="https://github.com/askmaddyy/DuoBook/raw/main/docs/demo.mp4" controls muted width="100%"></video>
+
+One take, no cuts, filmed on a phone. The site on screen is
+[AskMaddyy.com](https://askmaddyy.com).
 
 ## Requirements
 

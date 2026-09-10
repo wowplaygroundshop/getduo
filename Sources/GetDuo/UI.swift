@@ -25,7 +25,7 @@ struct MenuContent: View {
 
         Button("Settings…") { SettingsWindow.show() }
             .keyboardShortcut(",")
-        Button("Quit DuoBook") { NSApp.terminate(nil) }
+        Button("Quit GetDuo") { NSApp.terminate(nil) }
             .keyboardShortcut("q")
     }
 }
@@ -40,7 +40,7 @@ enum SettingsWindow {
             let w = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 520, height: 720),
                              styleMask: [.titled, .closable],
                              backing: .buffered, defer: false)
-            w.title = "DuoBook"
+            w.title = "GetDuo"
             w.isReleasedWhenClosed = false
             w.contentView = NSHostingView(rootView: SettingsView())
             w.center()

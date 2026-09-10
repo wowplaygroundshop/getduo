@@ -6,7 +6,7 @@ import CoreVideo
 /// Streams one display straight into Metal textures. No CPU copy.
 final class ScreenCapture: NSObject, SCStreamOutput, SCStreamDelegate {
     private let device: MTLDevice
-    private let queue = DispatchQueue(label: "app.askmaddyy.duobook.capture")
+    private let queue = DispatchQueue(label: "shop.wowplayground.getduo.capture")
     private var stream: SCStream?
     private var starting = false
     private let lock = NSLock()

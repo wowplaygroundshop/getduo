@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleName</key><string>DuoBook</string>
-    <key>CFBundleDisplayName</key><string>DuoBook</string>
-    <key>CFBundleExecutable</key><string>DuoBook</string>
-    <key>CFBundleIdentifier</key><string>app.askmaddyy.duobook</string>
+    <key>CFBundleName</key><string>GetDuo</string>
+    <key>CFBundleDisplayName</key><string>GetDuo</string>
+    <key>CFBundleExecutable</key><string>GetDuo</string>
+    <key>CFBundleIdentifier</key><string>shop.wowplayground.getduo</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleShortVersionString</key><string>1.0</string>
     <key>CFBundleVersion</key><string>1</string>

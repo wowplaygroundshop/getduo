@@ -34,13 +34,13 @@ final class FoldEngine: ObservableObject {
         manualAngle = nil
     }
 
-    /// Set DUOBOOK_DEBUG=1 to trace activation. Errors always log.
-    private static let debug = ProcessInfo.processInfo.environment["DUOBOOK_DEBUG"] != nil
-    func log(_ message: String) { if Self.debug { NSLog("DuoBook: %@", message) } }
+    /// Set GETDUO_DEBUG=1 to trace activation. Errors always log.
+    private static let debug = ProcessInfo.processInfo.environment["GETDUO_DEBUG"] != nil
+    func log(_ message: String) { if Self.debug { NSLog("GetDuo: %@", message) } }
 
     func start() {
         guard let renderer = FoldRenderer() else {
-            NSLog("DuoBook: Metal pipeline unavailable")
+            NSLog("GetDuo: Metal pipeline unavailable")
             return
         }
         self.renderer = renderer
@@ -144,7 +144,7 @@ final class FoldEngine: ObservableObject {
                     try await capture.start(displayID: NSScreen.builtIn?.displayID ?? CGMainDisplayID())
                 self?.log("capture started")
             } catch {
-                NSLog("DuoBook: capture failed - \(error)")
+                NSLog("GetDuo: capture failed - \(error)")
                 self?.deactivate()
             }
         }

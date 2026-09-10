@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "DuoBook",
+    name: "GetDuo",
     platforms: [.macOS(.v14)],
     targets: [
         .executableTarget(
-            name: "DuoBook",
-            path: "Sources/DuoBook",
+            name: "GetDuo",
+            path: "Sources/GetDuo",
             exclude: ["Shader.metal"],
             swiftSettings: [.swiftLanguageMode(.v5)]
         )

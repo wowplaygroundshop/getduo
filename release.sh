@@ -7,15 +7,15 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 PROFILE="${NOTARY_PROFILE:-fold-notary}"
-DMG="build/DuoBook.dmg"
+DMG="build/GetDuo.dmg"
 
 UNIVERSAL=1 ./build.sh
 
 rm -f "$DMG"
 rm -rf build/dmg && mkdir -p build/dmg
-cp -R build/DuoBook.app build/dmg/
+cp -R build/GetDuo.app build/dmg/
 ln -s /Applications build/dmg/Applications
-hdiutil create -volname DuoBook -srcfolder build/dmg -ov -format ULFO "$DMG" >/dev/null
+hdiutil create -volname GetDuo -srcfolder build/dmg -ov -format ULFO "$DMG" >/dev/null
 
 codesign --force --sign "$(security find-identity -v -p codesigning \
     | grep 'Developer ID Application' | head -1 | sed 's/.*"\(.*\)"/\1/')" "$DMG"

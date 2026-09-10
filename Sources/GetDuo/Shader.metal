@@ -1,10 +1,10 @@
 //
 //  Shader.metal
-//  Fold
+//  GetDuo
 //
-//  Port of FrostFold.metal to a full-screen fragment pass over a captured desktop.
+//  Full-screen fragment pass over captured desktop texture.
 //
-//  Same model, one axis rotated: the desktop lives on a fixed plane, the plane the screen
+//  The desktop lives on a fixed plane, the plane the screen
 //  occupied when the lid was open past the clear angle. The viewer does not move. Only the
 //  glass moves: as the lid closes by `tilt`, the panel rotates around its bottom edge — the
 //  hinge — which stays in the plane, and the rest of the glass rises toward the eye.
@@ -12,8 +12,7 @@
 //  onto the desktop plane, and blur around the hit with a radius set by the gap at that pixel.
 //  Rays that miss the desktop are black.
 //
-//  Everything is computed on a virtual canvas 1000 units tall, so one set of tunables works
-//  at any resolution and the iOS tuning carries straight over.
+//  Everything is computed on a virtual canvas 1000 units tall for resolution-independent rendering.
 //
 
 #include <metal_stdlib>

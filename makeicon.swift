@@ -1,4 +1,4 @@
-// swift makeicon.swift <out.icns> -- draws the Fold app icon.
+// swift makeicon.swift <out.icns> -- draws the GetDuo app icon.
 import AppKit
 
 func draw(_ s: CGFloat) -> NSImage {

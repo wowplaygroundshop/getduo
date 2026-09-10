@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct DuoBookApp: App {
+struct GetDuoApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @ObservedObject private var engine = FoldEngine.shared
 

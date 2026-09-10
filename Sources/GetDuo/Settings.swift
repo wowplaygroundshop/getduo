@@ -12,8 +12,7 @@ struct Preset: Identifiable, Hashable {
     var baseSeparation: Float
     var maxTilt: Float
 
-    /// Shade is FrostFold's own tuning, converted to canvas units. Silk and Frost move
-    /// the tilt and the glass gap around it.
+    /// Default presets configure the tilt and glass gap for different visual effects.
     static let all: [Preset] = [
         Preset(id: "silk", name: "Silk", detail: "A soft lean. Barely there.",
                symbol: "wind", eyeDistance: 2254, blurSpread: 0.10,

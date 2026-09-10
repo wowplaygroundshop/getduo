@@ -12,7 +12,7 @@ import QuartzCore
 /// the fold is live and drops to a trickle when the lid is parked, so an open laptop costs
 /// nothing.
 final class LidAngleSensor {
-    static let debug = ProcessInfo.processInfo.environment["DUOBOOK_DEBUG"] != nil
+    static let debug = ProcessInfo.processInfo.environment["GETDUO_DEBUG"] != nil
 
     private let sensorPage = 0x20
     private let lidUsage = 0x8A
@@ -56,7 +56,7 @@ final class LidAngleSensor {
         read()
 
         let thread = Thread { [weak self] in self?.poll() }
-        thread.name = "app.askmaddyy.duobook.hinge"
+        thread.name = "shop.wowplayground.getduo.hinge"
         thread.qualityOfService = .userInteractive
         thread.start()
         self.thread = thread
@@ -76,7 +76,7 @@ final class LidAngleSensor {
                 if degrees != last {
                     if Self.debug {
                         let now = CACurrentMediaTime()
-                        NSLog("DuoBook: hinge %.0f deg  %.0f ms since last change", degrees, (now - lastChange) * 1000)
+                        NSLog("GetDuo: hinge %.0f deg  %.0f ms since last change", degrees, (now - lastChange) * 1000)
                         lastChange = now
                     }
                     last = degrees

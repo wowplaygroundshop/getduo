@@ -14,6 +14,7 @@ APP="build/DuoBook.app"
 ARCHS=(--arch arm64)
 [[ "${UNIVERSAL:-0}" == "1" ]] && ARCHS=(--arch arm64 --arch x86_64)
 
+mkdir -p build
 swift build -c release "${ARCHS[@]}"
 BIN=$(swift build -c release "${ARCHS[@]}" --show-bin-path)
 
